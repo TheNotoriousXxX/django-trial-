@@ -128,6 +128,8 @@ class VideoCamera(object):
         l_img=0
         crop=0
         #path="/imageuploader/ + self.post_id"
+        shoo="pant"
+        noo="shirt"
 
 
         #use=str(catt.split('/')[0:-1])
@@ -166,10 +168,10 @@ class VideoCamera(object):
             u_offset=y_offset
             d_offset=2*u_offset
 
-            if(lion=="pant.jpg"):
+            if shoo in lion:
                 y_offset=d_offset
 
-            elif(lion=="shirt.jpg"):
+            elif noo in lion:
                 y_offset=u_offset    
 
 
