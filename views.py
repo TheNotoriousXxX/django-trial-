@@ -130,6 +130,17 @@ class VideoCamera(object):
         #path="/imageuploader/ + self.post_id"
 
 
+        #use=str(catt.split('/')[0:-1])
+        #use=str(use)
+        cattt=catt + "/"
+        dog=cattt.split('/')[:-1]
+        lionn=dog[-1]
+        lion=str(lionn)
+
+        #sub=str('h'.join(use.split('.')[0:]))
+        #sub=str(sub)
+
+
 
         face_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         eye_cascade=cv2.CascadeClassifier('haarcascade_eye.xml')
@@ -152,6 +163,18 @@ class VideoCamera(object):
             y_onset = 2.5*h/s_img.shape[1]+z_user
             x_offset = int(x - x_onset*200)+x_user
             y_offset = int(y + h + 15)+y_user
+            u_offset=y_offset
+            d_offset=2*u_offset
+
+            if(lion=="pant.jpg"):
+                y_offset=d_offset
+
+            elif(lion=="shirt.jpg"):
+                y_offset=u_offset    
+
+
+
+
             if x_offset<=0:
                 xcut=abs(x_offset)
                 x_offset=0
