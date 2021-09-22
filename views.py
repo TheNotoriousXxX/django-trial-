@@ -49,6 +49,15 @@ def decent(request):
 
         #pass
 
+def cutie(request):
+    return render(request,'myapp/first.html')
+
+
+def cute(request):
+    return render(request,'myapp/sandu.html')
+
+    
+
 
 # Create your views here.
 
